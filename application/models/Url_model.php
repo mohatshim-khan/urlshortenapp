@@ -61,11 +61,12 @@
      * @return array
      */
 	public function get_top_url(){
-				 $this->db->order_by('id','DESC');
-		$query = $this->db->get('urls', 0, 100)->result_array();
+				  $this->db->order_by('id','DESC');
+		$result = $this->db->get('urls', 0, 100)->result_array();
+		return $result;
 	} 
 
-	
+
 
 }
 /* End of file Url_model.php */

@@ -18,10 +18,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	  <!-- Links -->
 	  <ul class="navbar-nav">
 	    <li class="nav-item">
-	      <a class="nav-link" href="#">Form</a>
+	      <a class="nav-link" href="<?php echo base_url(); ?>index.php/url">Form</a>
 	    </li>
 	    <li class="nav-item">
-	      <a class="nav-link" href="#">List</a>
+	      <a class="nav-link" href="<?php echo base_url(); ?>index.php/url/listing">List</a>
 	    </li>
 	  </ul>
 	</nav>

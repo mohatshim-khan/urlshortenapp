@@ -83,9 +83,6 @@ class Url extends CI_Controller {
 	}
 
 
-
-
-
 }
 /* End of file Url.php */
 /* Location: ./application/controllers/Url.php */	
