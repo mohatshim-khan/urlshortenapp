@@ -1,7 +1,8 @@
-<?php /* Master Template file for commonly used files  */
+<?php /* Master Template file for common use  */
 	$this->load->view('includes/header');
 ?>
 
+<br>
 <?php	
 	if($page_url!=''){ 
 		$this->load->view($page_url); 
