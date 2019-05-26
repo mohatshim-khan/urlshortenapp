@@ -82,7 +82,27 @@ class Url extends CI_Controller {
 		$this->load->view('includes/template',$data);
 	}
 
+	/**
+     * Redirect to original url from short url  
+     * @param $short
+     */
+	public function short($short){
 
+		$get_short = $this->url_model->check_short_exists($short);
+
+		if($get_short){
+			
+			$url = trim($get_short['url']);
+			
+			redirect($url);
+		
+		} else {
+			
+			$this->session->set_flashdata('msg', 'Wrong short url supplied.');
+			
+			redirect('url');
+		}
+	}
 }
 /* End of file Url.php */
 /* Location: ./application/controllers/Url.php */	

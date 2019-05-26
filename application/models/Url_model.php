@@ -66,8 +66,30 @@
 		return $result;
 	} 
 
+	/**
+     * Check records for already existing short 
+     * @param $short
+     * @return array or false
+     */
+	public function check_short_exists($short){
+		
+				 $this->db->where('short', $short);
+		$query = $this->db->get('urls');
 
+		$num_rows = $query->num_rows();
 
+		if($num_rows>0){
+			
+			$result = $query->row_array();
+		
+			return $result;
+
+		} else {
+
+			return false;
+		}
+	}
+	
 }
 /* End of file Url_model.php */
 /* Location: ./application/models/url_model.php */		
