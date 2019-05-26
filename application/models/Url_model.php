@@ -42,6 +42,31 @@
 		}
 	}
 
+	/**
+     * Retrieve the number of existing records.
+     * @return integer
+     */
+	public function get_url_num_rows(){
+		
+				 $this->db->order_by('id', 'DESC');	
+		$query = $this->db->get('urls');
+		
+		$num_rows = $query->num_rows();
+
+		return $num_rows;
+	}
+
+	/**
+     * Retrieve top recent 100 url records. 
+     * @return array
+     */
+	public function get_top_url(){
+				 $this->db->order_by('id','DESC');
+		$query = $this->db->get('urls', 0, 100)->result_array();
+	} 
+
+	
+
 }
 /* End of file Url_model.php */
 /* Location: ./application/models/url_model.php */		

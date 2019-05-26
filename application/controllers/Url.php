@@ -66,9 +66,26 @@ class Url extends CI_Controller {
 		}
 	}
 
+	/**
+	 * Display listing of top 100 urls (as per the description given by team)
+	 */
 	public function listing(){
 
-	}	
+		$data = array();
+
+		$data['num_rows'] = $this->url_model->get_url_num_rows();
+
+		$data['query'] = $this->url_model->get_top_url(); 
+
+		$data['page_url'] = "url_listing";
+
+		$this->load->view('includes/template',$data);
+	}
+
+
+
+
+
 }
 /* End of file Url.php */
 /* Location: ./application/controllers/Url.php */	
