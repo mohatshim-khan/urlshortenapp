@@ -1,4 +1,4 @@
-# Url Shorten App system for creating short url for any url
+# Url Shorten Application for creating short url.
 
 It is a demo project for demonstrating a usefull application using codeigniter framework.
 
